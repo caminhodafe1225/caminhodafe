@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const quizData = {
         start: {
-            question: "Qual é o seu principal objetivo com o nosso e-book?",
+            question: "Qual é o seu principal objetivo com o nosso calendário?",
             answers: ["Fortalecer a minha fé", "Voltar à intimidade com Deus"],
             paths: ["fortalecer", "reconectar"]
         },
@@ -90,11 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         final: {
             fortalecer: {
-                message: "Sabemos que você deseja fortalecer sua fé de forma verdadeira e constante. Por isso, preparamos um calendário de 30 dias repleto de reflexões, versículos e orações diárias, pensado especialmente para ajudá-lo a crescer espiritualmente e se sentir mais próximo de Deus a cada dia. Não deixe essa oportunidade passar: comece agora a transformar sua fé e a viver uma vida mais plena e iluminada!",
+                message: "Sabemos que você deseja fortalecer sua fé de forma verdadeira e constante. Por isso este calendário de 30 dias é ideal para isso. Com reflexões, versículos e orações diárias, ele vai ajudá-lo a crescer espiritualmente e se aproximar mais de Deus. Comece agora e viva uma fé mais forte e iluminada!",
                 button: "Quero o meu calendário!"
             },
             reconectar: {
-                message: "Percebemos que você está se sentindo distante de Deus, e queremos ajudá-lo a se reconectar de verdade. Por isso, preparamos um calendário de 30 dias cheio de reflexões, versículos e orações diárias, pensado especialmente para guiar você nessa jornada espiritual. Não perca essa oportunidade de transformar sua fé e trazer Deus de volta para o seu dia a dia. Comece agora e sinta a diferença em sua vida!",
+                message: "Percebemos que você está se sentindo distante de Deus, e esse calendário de 30 dias foi feito para mudar isso. Com reflexões, versículos e orações diárias, ele vai guiar você para se reconectar e fortalecer sua fé. Comece agora e transforme sua vida espiritual!",
                 button: "Quero o meu calendário!"
             }
         }
