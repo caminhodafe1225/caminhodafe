@@ -182,5 +182,40 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!sessionStorage.getItem('quizCompleted')) {
         startQuiz();
     }
+    
+    // ===== LÓGICA DO CONTADOR REGRESSIVO =====
+    const timerElement = document.getElementById('timer');
+    if (timerElement) {
+        const twentyMinutes = 20 * 60 * 1000;
+        let endTime = localStorage.getItem('countdownEndTime');
+
+        if (!endTime || new Date().getTime() > endTime) {
+            endTime = new Date().getTime() + twentyMinutes;
+            localStorage.setItem('countdownEndTime', endTime);
+        }
+
+        const countdownInterval = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = endTime - now;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                timerElement.textContent = "00:00";
+                const offerText = document.querySelector('#countdown-timer-header p');
+                if (offerText) {
+                    offerText.textContent = "Oferta encerrada!";
+                }
+                return;
+            }
+
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            timerElement.textContent = 
+                (minutes < 10 ? '0' : '') + minutes + ':' + 
+                (seconds < 10 ? '0' : '') + seconds;
+
+        }, 1000);
+    }
 });
 
